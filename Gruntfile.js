@@ -52,12 +52,6 @@ module.exports = function(grunt) {
         // copy all the asset files that are left
         files: ['assets/**/*', '!assets/sass/**/*', '!assets/js/**/*'],
         tasks: ['copy:assets', 'copy:production_assets']
-      },
-
-      grunticon: {
-        // watch for changes in the icon folder
-        files: 'assets/icons/svg/*.svg',
-        tasks: ['grunticon']
       }
     },
 
@@ -204,27 +198,6 @@ module.exports = function(grunt) {
 
   // --------------------------------------------------------------------------------- \\
 
-    grunticon: {
-      icons: {
-        files: [{
-            expand: true,
-            cwd: 'assets/icons/svg/',
-            src: ['*.svg', '*.png'],
-            dest: 'assets/icons'
-        }],
-        options: {
-          cssprefix: '.i-',
-          // define vars that can be used in filenames if desirable, e.g. foo.colors-primary-secondary.svg
-          // colors: {
-          //   primary: "red",
-          //   secondary: "#666"
-          // }
-        }
-      }
-    },
-
-  // --------------------------------------------------------------------------------- \\
-
     clean: {
       all: ['public/dev/', 'public/production/'],
       html: ['public/dev/**/*.html', 'public/production/**/*.html']
@@ -248,9 +221,7 @@ module.exports = function(grunt) {
     }
   });
 
-  // --------------------------------------------------------------------------------- \\
   // ---------------------------------- load tasks ----------------------------------- \\
-  // --------------------------------------------------------------------------------- \\
 
   // Load npm plugins to provide necessary tasks.
   grunt.loadNpmTasks('assemble');
@@ -260,7 +231,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-autoprefixer');
-  grunt.loadNpmTasks('grunt-grunticon');
   grunt.loadNpmTasks('grunt-aws');
 
   // Default task to be run.

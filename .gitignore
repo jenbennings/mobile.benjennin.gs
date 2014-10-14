@@ -8,7 +8,7 @@ tmp
 # ignore hidden stuff
 *.sublime-project
 *.sublime-workspace
-.sass-cache/
+.sass-cache
 .DS_Store
 
 # ignore the public folder

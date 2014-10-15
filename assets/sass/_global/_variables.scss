@@ -2,19 +2,19 @@
 
 
 // Global style variables
-// ------------------------------------------------------------------------------------ 
+// ------------------------------------------------------------------------------------
 
 
 // font family - update these when external fonts are setup
 
-$sans:   sans-serif;
+$sans:   'Graphik Web', sans-serif;
 $serif:  serif;
 
 
 // font weights should be descriptive
 
 $light:     300;
-$roman:     400;
+$regular:   400;
 $medium:    500;
 $semibold:  600;
 $bold:      700;
@@ -28,8 +28,8 @@ $base_line_height: 1.5;
 
 // Sometimes abstract terms are useful:
 
-$foreground:          #625e4f;
-$background:          #FDFDFD;
+$foreground:          #000000;
+$background:          #ffffff;
 
 $focus_color:         #4fa1fd;
 $alert_color:         #fd9833;

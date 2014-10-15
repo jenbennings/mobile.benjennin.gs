@@ -15,9 +15,7 @@ body, html {
 h2 {
   margin-top: 0;
 }
-.loading {
-  background: url('../img/ico_loading.gif') no-repeat center center;
-}
+
 section {
   min-width: 960px;
   opacity: 0;
@@ -381,19 +379,26 @@ main {
   position: relative;
 }
 
-.phone {
+.mobile {
   display: inline-block;
   width: 48px;
-  height: 65px;
-  background-color: black;
+  height: 68px;
+  background-image: url("../img/iphone.png");
+  background-size: cover;
 }
 
 .smIcons {
   display: inline-block;
   width: 48px;
   height: 48px;
-  background-color: black;
+  background-size: cover;
 }
+
+.email { background-image: url("../img/email.png"); }
+.twitter { background-image: url("../img/twitter.png"); }
+.dribbble { background-image: url("../img/dribbble.png"); }
+.github { background-image: url("../img/github.png"); }
+
 
 .twitterBanner {
   width: 100%;

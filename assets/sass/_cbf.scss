@@ -106,28 +106,18 @@ main {
 
 /* Slide 1 */
 #slide-1 .bcg {background-image:url('../img/1.jpg')}
-#slide-1 .hsContent {
-  bottom: 200px;
-  top: auto;
-}
 
 /* Slide 2 */
 #slide-2 .bcg {background-image:url('../img/2.jpg')}
-#slide-2 .hsContent {
-  margin-left: -450px;
-  bottom: 200px;
-  top: auto;
-}
 
 /* Slide 3 */
 #slide-3 .bcg {background-image:url('../img/3.jpg')}
-#slide-3 .hsContent {
-  margin-left: -239px;
-}
-  #slide-3 h2 {
-    color: #f2ead6;
-    background-color: rgba(0,0,0,0.6);
-  }
+
+/* Slide 4 */
+#slide-4 .bcg {background-image:url('../img/4.jpg')}
+
+/* Slide 5 */
+#slide-5 .bcg {background-image:url('../img/5.jpg')}
 
 
 /* ==========================================================================
@@ -391,20 +381,25 @@ main {
   position: relative;
 }
 
+.phone {
+  display: inline-block;
+  width: 48px;
+  height: 65px;
+  background-color: black;
+}
+
+.smIcons {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  background-color: black;
+}
+
 .twitterBanner {
   width: 100%;
   position: absolute;
   left: 0;
   bottom: 0;
-  background-color: black;
   text-align: center;
-  color: white;
-
-  p {
-    padding: 10px;
-  }
-}
-
-.reverse {
-  color: white;
+  margin-bottom: 20px;
 }

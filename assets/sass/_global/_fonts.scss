@@ -1,21 +1,13 @@
 
 
 @font-face {
-  font-family: 'Graphik Web';
-  src: url('../fonts/Graphik-Web-Regular.eot');
-  src: url('../fonts/Graphik-Web-Regular.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/Graphik-Web-Regular.woff') format('woff'),
-       url('../fonts/Graphik-Web-Regular.ttf') format('truetype'),
-       url('../fonts/Graphik-Web-Regular.svg#Graphik Web') format('svg');
+  font-family: 'Union';
+  src: url('../fonts/union-regular.woff');
   font-weight: 400;
 }
 
 @font-face {
-  font-family: 'Graphik Web';
-  src: url('../fonts/Graphik-Web-Medium.eot');
-  src: url('../fonts/Graphik-Web-Medium.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/Graphik-Web-Medium.woff') format('woff'),
-       url('../fonts/Graphik-Web-Medium.ttf') format('truetype'),
-       url('../fonts/Graphik-Web-Medium.svg#Graphik Web') format('svg');
-  font-weight: 500;
+  font-family: 'Union';
+  src: url('../fonts/union-bold.woff');
+  font-weight: 700;
 }

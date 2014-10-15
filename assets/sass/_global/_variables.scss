@@ -7,44 +7,9 @@
 
 // font family - update these when external fonts are setup
 
-$sans:   'Graphik Web', sans-serif;
-$serif:  serif;
+$sans:   'Union', sans-serif;
 
+// font weights
 
-// font weights should be descriptive
-
-$light:     300;
 $regular:   400;
-$medium:    500;
-$semibold:  600;
 $bold:      700;
-
-
-// font sizes generally used on the html element and some mixins
-
-$base_font_size: 16px;
-$base_line_height: 1.5;
-
-
-// Sometimes abstract terms are useful:
-
-$foreground:          #000000;
-$background:          #ffffff;
-
-$focus_color:         #4fa1fd;
-$alert_color:         #fd9833;
-
-
-// But most colour variables should use obvious names (green, red, etc..)
-
-$gold:           #b29863;
-$light-gold:     #c6c17f;
-
-$silver:         #737373;
-$light-silver:   #f0f0f0;
-
-$yellow:         #dcc442;
-$light-yellow:   #ede2a9;
-
-
-

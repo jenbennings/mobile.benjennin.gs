@@ -343,6 +343,10 @@ main {
   background-size: cover;
 }
 
+.isOpen {
+  background-image: url("../img/close.png");
+}
+
 .workContainer {
   width: 100%;
   height: 100%;
@@ -511,4 +515,8 @@ main {
 
 .wanker-content a {
   color: #e9522f;
+}
+
+.none {
+  display: none;
 }

@@ -7,3 +7,8 @@
 //         }, 1000);
 //     }
 // });
+
+$( "#workTitle" ).click(function() {
+  $( ".workContainer" ).toggleClass( "none" );
+  $( "#workTitle" ).toggleClass( "isOpen" )
+});

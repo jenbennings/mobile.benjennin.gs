@@ -18,7 +18,7 @@ h2 {
 }
 
 section {
-  min-width: 960px;
+  // min-width: 960px; (nfi why this was here)
   opacity: 0;
 }
 .loaded section,
@@ -40,19 +40,12 @@ main {
   left: 0;
 }
 .bcg {
-  background-repeat: no-repeat;
-  background-size: contain;
-  height: 100%;
-  width: 100%;
-
-@include breakpoint(portrait) {
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
   height: 100%;
   width: 100%;
-  }
 }
 
 .hsContainer {

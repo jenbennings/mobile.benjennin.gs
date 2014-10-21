@@ -8,7 +8,7 @@
 //     }
 // });
 
-$( "#workTitle" ).click(function() {
+$( "#infoToggle" ).click(function() {
   $( ".workContainer" ).toggleClass( "none" );
-  $( "#workTitle" ).toggleClass( "isOpen" )
+  $( "#infoToggle" ).toggleClass( "isOpen" )
 });

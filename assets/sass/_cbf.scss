@@ -331,7 +331,7 @@ main {
   padding: 10px;
 }
 
-.workTitle {
+.infoToggle {
   position: fixed;
   top: 0;
   right: 0;
@@ -360,9 +360,25 @@ main {
 .workBio {
   color: white;
   text-align: center;
-  font-size: 48px;
+  font-size: 16px;
+  max-width: 400px;
 }
 
+.workTitle {
+
+}
+
+.workDescription, .workLink {
+  font-family: monospace;
+}
+
+.workDescription {
+  margin-bottom: 20px;
+}
+
+.workLink {
+  text-decoration: underline;
+}
 
 .workContent {
   a {

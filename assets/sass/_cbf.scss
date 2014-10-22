@@ -35,11 +35,15 @@ main {
   width: 1px;
   height: 1px;
   overflow: hidden;
-  position: absolute;
   top: 0;
   left: 0;
 }
+
+.homeSlide {
+}
+
 .bcg {
+
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;

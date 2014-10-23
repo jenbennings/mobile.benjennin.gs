@@ -27,3 +27,7 @@ $(document).ready(function() {
     }, 800);
   });
 });
+
+$(function() {
+    FastClick.attach(document.body);
+});

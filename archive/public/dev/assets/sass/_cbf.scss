@@ -1,0 +1,531 @@
+html {
+
+}
+
+body, html {
+  height: 100%;
+  min-height: 100%;
+  background-color: white;
+  font-family: $sans;
+}
+
+.no-js {
+  padding-top: 106px;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+section {
+  // min-width: 960px; (nfi why this was here)
+  opacity: 0;
+}
+.loaded section,
+.no-js section {
+  opacity: 1;
+  -webkit-transition: opacity 300ms ease-out;
+  -moz-transition: opacity 300ms ease-out;
+  transition: opacity 300ms ease-out;
+}
+main {
+  overflow-x: hidden;
+}
+#preload {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+}
+
+.homeSlide {
+}
+
+.bcg {
+  transform: rotateZ(360deg);
+  image-rendering: optimizeSpeed;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+
+@include breakpoint(portrait) {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  }
+}
+
+.hsContainer {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hsContent {
+  text-align: center;
+}
+
+.hsContent h1 {
+  color: #333;
+  font-size: 64px;
+}
+
+.hsContent h2 {
+  color: #333;
+  padding: 10px 5px;
+  font-size: 35px;
+  line-height: 38px;
+  margin-bottom: 12px;
+}
+
+.hsContent p {
+  display: inline-block;
+  margin-top: 20px;
+  padding-bottom: 2px;
+  color: #b2b2b2;
+  border-bottom: 1px solid #b2b2b2;
+}
+
+.hsContent a {
+  color: #b2b2b2;
+  text-decoration: underline;
+}
+
+.hsLink {
+  display: inline-block;
+
+
+  .hsText {
+    border-bottom: 1px solid black;
+    padding-bottom: 5px;
+  }
+
+  &:before {
+    content: '↪';
+    border-bottom: none;
+    margin-right: 2px;
+  }
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+
+.logoContainer {
+  width: 50px;
+  height: 50px;
+  background-color: #333;
+}
+
+.logo {
+  padding: 10px;
+}
+
+.infoToggle {
+  z-index: 9999;
+  position: fixed;
+  top: 0;
+  right: 0;
+  color: white;
+  margin-right: 10px;
+  margin-top: 10px;
+  width: 20px;
+  height: 20px;
+  background-image: url("../img/info.png");
+  background-size: cover;
+  cursor: pointer;
+  image-rendering: optimizeQuality;
+}
+
+.isOpen {
+  background-image: url("../img/close.png");
+}
+
+.workContainer {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.workBio {
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  max-width: 400px;
+}
+
+.workTitle {
+
+}
+
+.workDescription, .workLink {
+  font-family:"Inconsolata", monospace;
+}
+
+.workDescription {
+  margin-bottom: 20px;
+}
+
+.workLink {
+  text-decoration: underline;
+}
+
+.workContent {
+  a {
+    display: inline-block;
+    color: white;
+    border-bottom: 1px solid white;
+  }
+
+  h1 {
+    font-size: 24px;
+    margin-bottom: 25px;
+  }
+
+  p {
+    margin-bottom: 20px;
+    border-left: 3px solid black;
+    padding-left: 15px;
+  }
+}
+
+.workContentTest {
+  a {
+    display: inline-block;
+    color: white;
+    border-bottom: 1px solid white;
+  }
+
+  h1 {
+    font-size: 30px;
+    line-height: 1.3;
+    margin-bottom: 25px;
+  }
+
+  p {
+    margin-bottom: 20px;
+    border-left: 3px solid black;
+    padding-left: 15px;
+  }
+}
+
+.footerContainer {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.mobile {
+  display: inline-block;
+  width: 48px;
+  height: 68px;
+  background-image: url("../img/iphone.png");
+  background-size: cover;
+}
+
+.smIcons {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  background-size: cover;
+  image-rendering: optimizeQuality;
+  -webkit-backface-visibility: hidden;
+}
+
+.email { background-image: url("../img/email.png"); }
+.twitter { background-image: url("../img/twitter.png"); }
+.dribbble { background-image: url("../img/dribbble.png"); }
+.github { background-image: url("../img/github.png"); }
+
+
+.smLinks {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.tooltip, .arrow:after {
+  background: rgba(0,0,0,.75);
+}
+
+.tooltip {
+  pointer-events: none;
+  opacity: 0;
+  display: inline-block;
+  position: absolute;
+  padding: 10px 10px;
+  color: white;
+  font-size: 11px;
+  font-family:"Inconsolata", monospace;
+  line-height: 1;
+  border-radius: 5px;
+  margin-left: 15px;
+  margin-top: 5px;
+  text-align: center;
+}
+.arrow {
+  width: 70px;
+  height: 16px;
+  overflow: hidden;
+  position: absolute;
+  left: 50%;
+  margin-left: -35px;
+  bottom: -16px;
+}
+.arrow:after {
+  content: "";
+  position: absolute;
+  left: 25px;
+  top: -18px;
+  width: 20px;
+  height: 20px;
+  border-radius: 2px;
+  -webkit-transform: rotate(45deg);
+}
+.tooltip.active {
+  opacity: 1;
+  // margin-top: 5px;
+  // -webkit-transition: all 0.2s ease;
+}
+.tooltip.out {
+  opacity: 0;
+  margin-top: -20px;
+}
+
+.wanker {
+  background: #000;
+  color: #FFF;
+  display: none;
+  font-family: Helvetica, Arial, sans-serif;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2014;
+}
+
+.wanker-content {
+  position: relative;
+  margin: 3em auto 0;
+  width: 80%;
+}
+
+.wanker-content h1 {
+  font-size: 4em;
+  line-height: .9em;
+  margin-bottom: 2em;
+}
+
+.wanker-content a {
+  color: #e9522f;
+}
+
+.none {
+  display: none;
+}

@@ -34,7 +34,7 @@ gulp.task('styles', function() {
 });
 
 gulp.task('watch', function() {
-  gulp.watch(SCRIPTS_ENTRY, ['scripts']);
+  gulp.watch([SCRIPTS_ENTRY, 'screens.js'], ['scripts']);
   gulp.watch(STYLES_ENTRY, ['styles']);
 });
 

@@ -2,4 +2,32 @@
   margin: 0;
   padding: 0;
   font: inherit;
+  box-sizing: border-box;
+  color: inherit;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+h1 {
+  font-size: 64px;
+  font-weight: bold;
+  color: #333;
+}
+
+.Site {
+  .Screens, .Screen {
+    width: 100vw;
+    height: 100vh;
+  }
 }

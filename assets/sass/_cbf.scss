@@ -43,7 +43,8 @@ main {
 }
 
 .bcg {
-  -webkit-transform: rotateZ(360deg);
+  transform: rotateZ(360deg);
+  image-rendering: optimizeSpeed;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -332,6 +333,7 @@ main {
 }
 
 .infoToggle {
+  z-index: 9999;
   position: fixed;
   top: 0;
   right: 0;
@@ -343,6 +345,7 @@ main {
   background-image: url("../img/info.png");
   background-size: cover;
   cursor: pointer;
+  image-rendering: optimizeQuality;
 }
 
 .isOpen {
@@ -443,6 +446,8 @@ main {
   width: 48px;
   height: 48px;
   background-size: cover;
+  image-rendering: optimizeQuality;
+  -webkit-backface-visibility: hidden;
 }
 
 .email { background-image: url("../img/email.png"); }

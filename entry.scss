@@ -1,3 +1,17 @@
+$ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+
+@font-face {
+  font-family: 'Union';
+  src: url('fonts/union-regular.woff');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Union';
+  src: url('fonts/union-bold.woff');
+  font-weight: 700;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -7,7 +21,10 @@
 }
 
 body {
-  font-family: sans-serif;
+  font-family: 'Inconsolata', monospace;
+  font-size: 16px;
+  line-height: 20px;
+  text-rendering: optimizeLegibility;
 }
 
 a {
@@ -19,15 +36,111 @@ img {
   max-width: 100%;
 }
 
+h1, h2, h3, h4, h5, p {
+  margin-bottom: 20px;
+}
+h1, h2, h3, h4, h5 {
+  font-family: 'Union', sans-serif;
+  font-weight: bold;
+}
 h1 {
   font-size: 64px;
-  font-weight: bold;
+  line-height: 64px;
   color: #333;
+  [data-icon] {
+    width: 48px;
+    height: 64px;
+  }
+}
+h2 {
+  font-size: 32px;
+  line-height: 32px;
 }
 
-.Site {
-  .Screens, .Screen {
+[data-icon] {
+  display: inline-block;
+  color: red;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  &[data-icon="mobile"] {
+    background-image: url('images/icons/iphone.png');
+  }
+}
+
+.Screen {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  text-align: center;
+}
+
+.ScreenHTML {
+  margin: auto;
+}
+
+.ScreenProject {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  &[data-show-info="false"] {
+    .ScreenProjectInfo {
+      display: none;
+    }
+  }
+}
+
+.ScreenProjectInfoToggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 200;
+  padding: 20px;
+  color: white;
+}
+
+.ScreenProjectInfo {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: 100;
+  display: flex;
+  background: linear-gradient(transparentize(black, 0.25) 0%, transparentize(black, 0.50) 75%);
+  color: white;
+  .ScreenProjectInfoContent {
+    margin: auto;
+    width: 480px;
+    a {
+      display: inline-block;
+      border-bottom: 1px solid;
+      &:hover {
+        border-bottom-style: dotted;
+      }
+    }
+  }
+}
+
+.ScreenProjectImages {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  transition: left 0.6s $ease-out-expo;
+  .ScreenProjectImage {
     width: 100vw;
     height: 100vh;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    image-rendering: optimizeSpeed;
+    transform: rotateZ(360deg);
+    float: left;
+    .ScreenProjectImageCounter {
+      color: white;
+      position: absolute;
+      top: 0; left: 0;
+      padding: 20px;
+    }
   }
 }

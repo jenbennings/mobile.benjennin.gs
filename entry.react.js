@@ -1,6 +1,9 @@
 /** @jsx React.DOM */
 
 var React = require('react');
+var attachFastClick = require('fastclick')
+
+attachFastClick(document.body);
 
 const SCREENS = require('./screens.js');
 

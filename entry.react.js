@@ -26,20 +26,14 @@ var ScreenProjectImages = React.createClass({
   render: function() {
     var images = this.props.data.map(function(image, i) {
       var style = {
-        backgroundImage: 'url("images/projects/'+ image +'")'
+        backgroundImage: 'url("images/projects/'+ image +'")',
+        opacity: this.state.currentImage === i ? 1 : 0
       }
 
-      return (<div className="ScreenProjectImage" key={image} style={style}>
-        {/*<div className="ScreenProjectImageCounter">{i+1}</div>*/}
-      </div>);
+      return (<div className="ScreenProjectImage" key={image} style={style} />);
     }.bind(this));
 
-    var style = {
-      width: (this.props.data.length * 100) + 'vw',
-      left: (-100 * this.state.currentImage) + '%'
-    }
-
-    return (<div className="ScreenProjectImages" style={style} onClick={this.handleClick}>
+    return (<div className="ScreenProjectImages" onClick={this.handleClick}>
       {images}
     </div>);
   }

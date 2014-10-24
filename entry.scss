@@ -156,6 +156,10 @@ h2 {
   width: 100vw;
   height: 100vh;
   position: absolute;
+  cursor: url('images/icons/right.png'), auto;
+  &[data-mouse-state="prev"] {
+    cursor: url('images/icons/left.png'), auto;
+  }
   .ScreenProjectImage {
     position: absolute;
     visibility: hidden;
@@ -166,7 +170,6 @@ h2 {
     background-size: cover;
     image-rendering: optimizeSpeed;
     transform: rotateZ(360deg);
-    cursor: url('images/icons/right.png'), auto;
     .ScreenProjectImageCounter {
       color: white;
       position: absolute;

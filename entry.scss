@@ -2,14 +2,14 @@ $ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
 
 @font-face {
   font-family: 'Union';
-  src: url('fonts/union-regular.woff');
-  font-weight: 400;
+  src: url('fonts/union-bold.woff');
+  font-weight: 700;
 }
 
 @font-face {
-  font-family: 'Union';
-  src: url('fonts/union-bold.woff');
-  font-weight: 700;
+  font-family: 'Inconsolata';
+  src: url('fonts/inconsolata.woff');
+  font-weight: 400;
 }
 
 * {

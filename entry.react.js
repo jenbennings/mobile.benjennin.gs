@@ -47,7 +47,7 @@ var ScreenProjectImages = React.createClass({
     var images = this.props.data.map(function(image, i) {
       var style = {
         backgroundImage: 'url("images/projects/'+ image +'")',
-        opacity: this.state.currentImage === i ? 1 : 0
+        visibility: this.state.currentImage === i ? 'visible' : 'hidden'
       }
 
       return (<div className="ScreenProjectImage" key={image} style={style} />);

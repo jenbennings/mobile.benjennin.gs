@@ -175,23 +175,4 @@ h2 {
       padding: 20px;
     }
   }
-  .ScreenProjectImagesNavigation {
-    a {
-      position: absolute;
-      z-index: 50;
-      top: 50%;
-      margin-top: -12px;
-      &[data-dir="prev"] {
-        left: 15%;
-      }
-      &[data-dir="next"] {
-        right: 15%;
-      }
-      span[data-icon] {
-        width: 24px;
-        height: 24px;
-        background: black;
-      }
-    }
-  }
 }

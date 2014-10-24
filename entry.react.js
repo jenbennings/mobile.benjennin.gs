@@ -8,12 +8,20 @@ var ScreenProjectImages = React.createClass({
   getInitialState: function() {
     return {
       currentImage: 0,
+      mouseState: 'next'
     }
   },
   getInitialProps: function() {
     return {
       data: new Array
     }
+  },
+  handleMouseMove: function(event) {
+    var mouseState = event.clientX > window.innerWidth / 2 ? 'next' : 'prev';
+    this.setState({ mouseState: mouseState });
+  },
+  handleClick: function(event) {
+    this.state.mouseState === 'next' ? this.handleNext(event) : this.handlePrev(event);
   },
   handleNext: function(event) {
     event.preventDefault();
@@ -45,13 +53,7 @@ var ScreenProjectImages = React.createClass({
       return (<div className="ScreenProjectImage" key={image} style={style} />);
     }.bind(this));
 
-    return (<div className="ScreenProjectImages" onClick={this.handleClick}>
-      {this.props.data.length > 1 &&
-        <div className="ScreenProjectImagesNavigation">
-          <a href="#" data-dir="prev" onClick={this.handlePrev}><span data-icon="eyes-prev" /></a>
-          <a href="#" data-dir="next" onClick={this.handleNext}><span data-icon="eyes-next" /></a>
-        </div>
-      }
+    return (<div className="ScreenProjectImages" onMouseMove={this.handleMouseMove} onClick={this.handleClick} data-mouse-state={this.state.mouseState}>
       {images}
     </div>);
   }

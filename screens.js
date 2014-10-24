@@ -6,7 +6,7 @@ module.exports = [{
     title: 'Huxtaburger',
     description: 'A responsive website that blah blah responsive yadda yadda. A collaboration between derp & derp.',
     link: 'http://google.com/',
-    images: ['huxtaburger-1.jpg', 'hive-1.jpg', '3.jpg']
+    images: ['huxtaburger-1.jpg', 'huxtaburger-2.jpg', 'huxtaburger-3.jpg']
   }
 }, {
   project: {

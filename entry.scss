@@ -143,6 +143,7 @@ h2 {
   .ScreenProjectInfoContent {
     margin: auto;
     width: 480px;
+    padding: 24px;
     a {
       display: inline-block;
       border-bottom: 1px solid;
@@ -178,6 +179,22 @@ h2 {
       position: absolute;
       top: 0; left: 0;
       padding: 20px;
+    }
+  }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  h1 {
+  font-size: 36px;
+  line-height: 36px;
+  [data-icon] {
+    width: 18px;
+    height: 24px;
+  }
+}
+  .ScreenProjectImages {
+    .ScreenProjectImage {
+      background-attachment: scroll;
     }
   }
 }

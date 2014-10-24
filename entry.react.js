@@ -119,7 +119,8 @@ var Screen = React.createClass({
     return {
       data: {
         project: false,
-        html: null
+        html: null,
+        last: false
       }
     }
   },
@@ -131,13 +132,33 @@ var Screen = React.createClass({
       {this.props.data.project &&
         <ScreenProject data={this.props.data.project} />
       }
+      {this.props.last &&
+        <div className="Footer">
+          <a href="mailto:hello@benjennin.gs">
+            <span data-icon="email" />
+            <span className="Tooltip">Email</span>
+          </a>
+          <a href="http://twitter.com/benjennin_gs">
+            <span data-icon="twitter" />
+            <span className="Tooltip">Twitter</span>
+          </a>
+          <a href="http://dribbble.com/benjennings">
+            <span data-icon="dribbble" />
+            <span className="Tooltip">Dribble</span>
+          </a>
+          <a href="http://github.com/jenbennings">
+            <span data-icon="github" />
+            <span className="Tooltip">Github</span>
+          </a>
+        </div>
+      }
     </div>);
   }
 });
 
 var Site = React.createClass({
   renderScreen: function(screen, i) {
-    return (<Screen key={i} data={screen} />);
+    return (<Screen key={i} data={screen} last={i === SCREENS.length-1} />);
   },
   render: function() {
     return (<div className="Site">

@@ -67,15 +67,13 @@ h2 {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  &[data-icon="mobile"] {
-    background-image: url('images/icons/iphone.png');
-  }
-  &[data-icon="info"] {
-    background-image: url('images/icons/info.png');
-  }
-  &[data-icon="close"] {
-    background-image: url('images/icons/close.png');
-  }
+  &[data-icon="mobile"] { background-image: url('images/icons/iphone.png'); }
+  &[data-icon="info"] { background-image: url('images/icons/info.png'); }
+  &[data-icon="close"] { background-image: url('images/icons/close.png'); }
+  &[data-icon="email"] { background-image: url('images/icons/email.png'); }
+  &[data-icon="dribbble"] { background-image: url('images/icons/dribbble.png'); }
+  &[data-icon="twitter"] { background-image: url('images/icons/twitter.png'); }
+  &[data-icon="github"] { background-image: url('images/icons/github.png'); }
 }
 
 .Screen {
@@ -84,6 +82,7 @@ h2 {
   overflow: hidden;
   display: flex;
   text-align: center;
+  position: relative;
 }
 
 .ScreenHTML {
@@ -179,6 +178,35 @@ h2 {
       position: absolute;
       top: 0; left: 0;
       padding: 20px;
+    }
+  }
+}
+
+.Footer {
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 100vw;
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: center;
+  a {
+    position: relative;
+    margin: 0 12px;
+    padding: 12px 0;
+    display: block;
+    [data-icon] {
+      width: 48px;
+      height: 48px;
+    }
+    .Tooltip {
+      position: absolute;
+      left: -24px; right: -24px;
+      top: -24px;
+      text-align: center;
+      visibility: hidden;
+    }
+    &:hover .Tooltip {
+      visibility: visible;
     }
   }
 }

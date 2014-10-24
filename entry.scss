@@ -59,7 +59,6 @@ h2 {
 
 [data-icon] {
   display: inline-block;
-  color: red;
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -169,6 +168,25 @@ h2 {
       position: absolute;
       top: 0; left: 0;
       padding: 20px;
+    }
+  }
+  .ScreenProjectImagesNavigation {
+    a {
+      position: absolute;
+      z-index: 50;
+      top: 50%;
+      margin-top: -12px;
+      &[data-dir="prev"] {
+        left: 15%;
+      }
+      &[data-dir="next"] {
+        right: 15%;
+      }
+      span[data-icon] {
+        width: 24px;
+        height: 24px;
+        background: black;
+      }
     }
   }
 }

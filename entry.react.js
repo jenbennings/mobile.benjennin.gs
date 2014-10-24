@@ -15,11 +15,23 @@ var ScreenProjectImages = React.createClass({
       data: new Array
     }
   },
-  handleClick: function() {
+  handleNext: function(event) {
+    event.preventDefault();
+
     var currentImage = this.state.currentImage;
     currentImage++;
 
-    if(this.props.data.length < currentImage+1) currentImage = 0;
+    if(currentImage === this.props.data.length) currentImage = 0;
+
+    this.setState({ currentImage: currentImage });
+  },
+  handlePrev: function(event) {
+    event.preventDefault();
+
+    var currentImage = this.state.currentImage;
+    currentImage--;
+
+    if(currentImage < 0) currentImage = this.props.data.length-1;
 
     this.setState({ currentImage: currentImage });
   },
@@ -34,6 +46,12 @@ var ScreenProjectImages = React.createClass({
     }.bind(this));
 
     return (<div className="ScreenProjectImages" onClick={this.handleClick}>
+      {this.props.data.length > 1 &&
+        <div className="ScreenProjectImagesNavigation">
+          <a href="#" data-dir="prev" onClick={this.handlePrev}><span data-icon="eyes-prev" /></a>
+          <a href="#" data-dir="next" onClick={this.handleNext}><span data-icon="eyes-next" /></a>
+        </div>
+      }
       {images}
     </div>);
   }

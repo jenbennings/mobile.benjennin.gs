@@ -66,6 +66,12 @@ h2 {
   &[data-icon="mobile"] {
     background-image: url('images/icons/iphone.png');
   }
+  &[data-icon="info"] {
+    background-image: url('images/icons/info.png');
+  }
+  &[data-icon="close"] {
+    background-image: url('images/icons/close.png');
+  }
 }
 
 .Screen {
@@ -90,6 +96,18 @@ h2 {
       opacity: 0;
       pointer-events: none;
     }
+    .ScreenProjectInfoToggle {
+      span[data-icon="info"] {
+        display: inherit;
+      }
+    }
+  }
+  &[data-show-info="true"] {
+    .ScreenProjectInfoToggle {
+      span[data-icon="close"] {
+        display: inherit;
+      }
+    }
   }
 }
 
@@ -100,6 +118,11 @@ h2 {
   z-index: 200;
   padding: 20px;
   color: white;
+  span[data-icon] {
+    width: 24px;
+    height: 24px;
+    display: none;
+  }
 }
 
 .ScreenProjectInfo {

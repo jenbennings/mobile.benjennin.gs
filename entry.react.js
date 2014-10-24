@@ -63,7 +63,10 @@ var ScreenProject = React.createClass({
     var hasProjectInfo = this.props.data.title || this.props.data.description || this.props.data.link;
     return (<div className="ScreenProject" data-show-info={this.state.showInfo}>
       {hasProjectInfo &&
-        <a className="ScreenProjectInfoToggle" href="#" onClick={this.handleClickShowInfo}>Info</a>
+        <a className="ScreenProjectInfoToggle" href="#" onClick={this.handleClickShowInfo}>
+          <span data-icon="info" />
+          <span data-icon="close" />
+        </a>
       }
       {hasProjectInfo &&
         <div className="ScreenProjectInfo">

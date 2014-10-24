@@ -8,7 +8,7 @@ var ScreenProjectImages = React.createClass({
   getInitialState: function() {
     return {
       currentImage: 0,
-      mouseState: 'next'
+      mouseState: null
     }
   },
   getInitialProps: function() {
@@ -18,7 +18,7 @@ var ScreenProjectImages = React.createClass({
   },
   handleMouseMove: function(event) {
     var mouseState = event.clientX > window.innerWidth / 2 ? 'next' : 'prev';
-    this.setState({ mouseState: mouseState });
+    if(this.props.data.length > 1) this.setState({ mouseState: mouseState });
   },
   handleClick: function(event) {
     this.state.mouseState === 'next' ? this.handleNext(event) : this.handlePrev(event);

@@ -156,7 +156,9 @@ h2 {
   width: 100vw;
   height: 100vh;
   position: absolute;
-  cursor: url('images/icons/right.png'), auto;
+  &[data-mouse-state="next"] {
+    cursor: url('images/icons/right.png'), auto;
+  }
   &[data-mouse-state="prev"] {
     cursor: url('images/icons/left.png'), auto;
   }

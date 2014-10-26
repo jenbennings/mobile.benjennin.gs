@@ -119,19 +119,19 @@ var Screen = React.createClass({
       }
       {this.props.last &&
         <div className="Footer">
-          <a href="mailto:hello@benjennin.gs">
+          <a href="mailto:hello@benjennin.gs" target="_blank">
             <span data-icon="email" />
             <span className="Tooltip">Email</span>
           </a>
-          <a href="http://twitter.com/benjennin_gs">
+          <a href="http://twitter.com/benjennin_gs" target="_blank">
             <span data-icon="twitter" />
             <span className="Tooltip">Twitter</span>
           </a>
-          <a href="http://dribbble.com/benjennings">
+          <a href="http://dribbble.com/benjennings" target="_blank">
             <span data-icon="dribbble" />
             <span className="Tooltip">Dribble</span>
           </a>
-          <a href="http://github.com/jenbennings">
+          <a href="http://github.com/jenbennings" target="_blank">
             <span data-icon="github" />
             <span className="Tooltip">Github</span>
           </a>

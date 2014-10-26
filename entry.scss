@@ -95,6 +95,9 @@ h2 {
   height: 100vh;
   overflow: hidden;
   position: relative;
+}
+
+.Site {
   &[data-show-info="false"] {
     .ScreenProjectInfo {
       opacity: 0;
@@ -114,9 +117,8 @@ h2 {
     }
   }
 }
-
 .ScreenProjectInfoToggle {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   z-index: 200;

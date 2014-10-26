@@ -73,24 +73,9 @@ var ScreenProject = React.createClass({
       }
     }
   },
-  getInitialState: function() {
-    return {
-      showInfo: false
-    }
-  },
-  handleClickShowInfo: function(event) {
-    event.preventDefault();
-    this.setState({ showInfo: !this.state.showInfo });
-  },
   render: function() {
     var hasProjectInfo = this.props.data.title || this.props.data.description || this.props.data.link;
-    return (<div className="ScreenProject" data-show-info={this.state.showInfo}>
-      {hasProjectInfo &&
-        <a className="ScreenProjectInfoToggle" href="#" onClick={this.handleClickShowInfo}>
-          <span data-icon="info" />
-          <span data-icon="close" />
-        </a>
-      }
+    return (<div className="ScreenProject">
       {hasProjectInfo &&
         <div className="ScreenProjectInfo">
           <div className="ScreenProjectInfoContent">
@@ -157,11 +142,24 @@ var Screen = React.createClass({
 });
 
 var Site = React.createClass({
+  getInitialState: function() {
+    return {
+      showInfo: false
+    }
+  },
+  handleClickShowInfo: function(event) {
+    event.preventDefault();
+    this.setState({ showInfo: !this.state.showInfo });
+  },
   renderScreen: function(screen, i) {
     return (<Screen key={i} data={screen} last={i === SCREENS.length-1} />);
   },
   render: function() {
-    return (<div className="Site">
+    return (<div className="Site" data-show-info={this.state.showInfo}>
+      <a className="ScreenProjectInfoToggle" href="#" onClick={this.handleClickShowInfo}>
+        <span data-icon="info" />
+        <span data-icon="close" />
+      </a>
       {SCREENS.map(this.renderScreen)}
     </div>);
   }

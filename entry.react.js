@@ -144,7 +144,8 @@ var Screen = React.createClass({
 var Site = React.createClass({
   getInitialState: function() {
     return {
-      showInfo: false
+      showInfo: false,
+      infoPosition: 'relative'
     }
   },
   handleClickShowInfo: function(event) {
@@ -154,9 +155,22 @@ var Site = React.createClass({
   renderScreen: function(screen, i) {
     return (<Screen key={i} data={screen} last={i === SCREENS.length-1} />);
   },
+  handleScroll: function(event) {
+    if(window.scrollY > window.innerHeight) {
+      this.setState({ infoPosition: 'fixed' });
+    } else {
+      this.setState({ infoPosition: 'relative' });
+    }
+  },
+  componentWillMount: function() {
+    window.addEventListener('scroll', this.handleScroll);
+  },
+  componentWillUnmount: function() {
+    window.removeEventListener('scroll', this.handleScroll);
+  },
   render: function() {
     return (<div className="Site" data-show-info={this.state.showInfo}>
-      <a className="ScreenProjectInfoToggle" href="#" onClick={this.handleClickShowInfo}>
+      <a className="ScreenProjectInfoToggle" href="#" onClick={this.handleClickShowInfo} data-position={this.state.infoPosition}>
         <span data-icon="info" />
         <span data-icon="close" />
       </a>

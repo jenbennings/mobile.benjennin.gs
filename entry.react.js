@@ -156,11 +156,20 @@ var Site = React.createClass({
     return (<Screen key={i} data={screen} last={i === SCREENS.length-1} />);
   },
   handleScroll: function(event) {
+    var position;
+    var infoBuffer = 48;
+
     if(window.scrollY > window.innerHeight) {
-      this.setState({ infoPosition: 'fixed' });
+      position = 'fixed';
+      
+      if(window.scrollY >= (SCREENS.length-1) * window.innerHeight - infoBuffer) {
+        position = 'hidden';
+      }
     } else {
-      this.setState({ infoPosition: 'relative' });
+      position = 'relative';
     }
+
+    if(this.state.infoPosition !== position) this.setState({ infoPosition: position });
   },
   componentWillMount: function() {
     window.addEventListener('scroll', this.handleScroll);

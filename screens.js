@@ -37,6 +37,6 @@ module.exports = [{
     images: ['5.jpg']
   }
 }, {
-  html: '<h1>Thank you and get amongst it.</h1>',
+  html: '<h2>Thank you and get amongst it.</h2>',
   project: false
 }];

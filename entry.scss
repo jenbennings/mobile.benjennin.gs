@@ -60,6 +60,10 @@ h1 {
 h2 {
   font-size: 36px;
   line-height: 36px;
+  [data-icon] {
+    width: 48px;
+    height: 47px;
+  }
 }
 
 [data-icon] {
@@ -68,8 +72,11 @@ h2 {
   background-position: center;
   background-repeat: no-repeat;
   &[data-icon="mobile"] { background-image: url('images/icons/iphone.png'); }
+  &[data-icon="desktop"] { background-image: url('images/icons/desktop.png'); width: 67px; }
   &[data-icon="info"] { background-image: url('images/icons/info.png'); }
   &[data-icon="close"] { background-image: url('images/icons/close.png'); }
+  &[data-icon="flag"] { background-image: url('images/icons/flag.png'); }
+  &[data-icon="coffee"] { background-image: url('images/icons/coffee.png'); }
   &[data-icon="email"] { background-image: url('images/icons/email.png'); }
   &[data-icon="dribbble"] { background-image: url('images/icons/dribbble.png'); }
   &[data-icon="twitter"] { background-image: url('images/icons/twitter.png'); }

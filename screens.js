@@ -1,5 +1,5 @@
 module.exports = [{
-  html: '<h1>I design <span data-icon="mobile"></span> interfaces.</h1>',
+  html: '<h1>I design <span data-icon="mobile"></span> interfaces</h1>',
   project: false
 }, {
   project: {
@@ -37,6 +37,6 @@ module.exports = [{
     images: ['5.jpg']
   }
 }, {
-  html: '<h2>Thank you and get amongst it.</h2>',
+  html: '<h2>hello@benjennin.gs</h2>',
   project: false
 }];

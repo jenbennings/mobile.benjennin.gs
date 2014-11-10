@@ -119,10 +119,6 @@ var Screen = React.createClass({
       }
       {this.props.last &&
         <div className="Footer">
-          <a href="mailto:hello@benjennin.gs" target="_blank">
-            <span data-icon="email" />
-            <span className="Tooltip">Email</span>
-          </a>
           <a href="http://twitter.com/benjennin_gs" target="_blank">
             <span data-icon="twitter" />
             <span className="Tooltip">Twitter</span>
@@ -161,7 +157,7 @@ var Site = React.createClass({
 
     if(window.scrollY > window.innerHeight) {
       position = 'fixed';
-      
+
       if(window.scrollY >= (SCREENS.length-1) * window.innerHeight - infoBuffer) {
         position = 'hidden';
       }

@@ -125,7 +125,7 @@ var Screen = React.createClass({
           </a>
           <a href="http://dribbble.com/benjennings" target="_blank">
             <span data-icon="dribbble" />
-            <span className="Tooltip">Dribble</span>
+            <span className="Tooltip">Dribbble</span>
           </a>
           <a href="http://github.com/jenbennings" target="_blank">
             <span data-icon="github" />

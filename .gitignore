@@ -12,7 +12,7 @@ tmp
 .DS_Store
 
 # ignore the public folder
-public/
+public/bundle.*
 
 # ignore credentials to avoid people publishing aws keys
 credentials.json

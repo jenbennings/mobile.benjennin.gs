@@ -18,16 +18,20 @@
     "node": ">=0.8"
   },
   "dependencies": {
-    "assemble": "0.4.42",
-    "grunt": "0.4.5",
-    "grunt-contrib-clean": "0.6.0",
-    "grunt-contrib-watch": "0.6.1",
-    "grunt-contrib-concat": "0.5.0",
-    "grunt-contrib-copy": "0.6.0",
-    "grunt-autoprefixer": "1.0.1",
-    "node-static": "0.7.6",
+    "fastclick": "^1.0.3",
+    "react": "^0.11.2"
+  },
+  "devDependencies": {
+    "ecstatic": "^0.5.5",
+    "gulp": "^3.8.9",
+    "gulp-autoprefixer": "^1.0.1",
+    "gulp-browserify": "^0.5.0",
+    "gulp-livereload": "^2.1.1",
+    "gulp-plumber": "^0.6.6",
+    "gulp-rename": "^1.2.0",
+    "gulp-sass": "^1.2.0",
+    "gulp-uglify": "^1.0.1",
     "open": "0.0.5",
-    "grunt-sass": "0.15.0",
-    "grunt-aws": "0.3.0"
+    "reactify": "^0.14.0"
   }
 }

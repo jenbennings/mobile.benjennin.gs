@@ -20,21 +20,21 @@ module.exports = [{
     title: 'UOME',
     description: 'A responsive website that blah blah responsive yadda yadda. A collaboration between derp & derp.',
     link: 'http://google.com/',
-    images: ['3.jpg']
+    images: ['uome.jpg']
   }
 }, {
   project: {
     title: 'Trolleybus',
     description: 'A responsive website that blah blah responsive yadda yadda. A collaboration between derp & derp.',
     link: 'http://google.com/',
-    images: ['4.jpg']
+    images: ['trolleybus.jpg']
   }
 }, {
   project: {
     title: 'Framer',
     description: 'A responsive website that blah blah responsive yadda yadda. A collaboration between derp & derp.',
     link: 'http://google.com/',
-    images: ['5.jpg']
+    images: ['framer.jpg']
   }
 }, {
   html: '<h2><a href="#">hello@benjennin.gs</a></h2>',

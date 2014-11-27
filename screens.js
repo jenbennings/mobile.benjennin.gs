@@ -1,6 +1,8 @@
 module.exports = [{
-  html: '<h1>I design <span data-icon="mobile"></span> interfaces</h1>',
-  project: false
+  intro: {
+    title: 'Derp',
+    images: ['home.jpg']
+  }
 }, {
   project: {
     title: 'Huxtaburger',

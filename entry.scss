@@ -143,6 +143,23 @@ h2 {
   position: relative;
 }
 
+
+.IntroContent {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: 100;
+  display: flex;
+  color: white;
+  opacity: 1;
+  .IntroTitle {
+    margin: auto;
+    width: 240px;
+    padding: 24px;
+  }
+}
+
+
 .Site {
   &[data-show-info="false"] {
     .ScreenProjectInfo {
@@ -215,13 +232,12 @@ h2 {
   height: 100vh;
   position: absolute;
     .ScreenProjectImage {
-    position: absolute;
-    visibility: hidden;
-    width: 100vw;
-    height: 100vh;
-    background-position: center;
-    background-attachment: fixed;
-    background-size: cover;
+      position: absolute;
+      width: 100vw;
+      height: 100vh;
+      background-position: center;
+      background-attachment: fixed;
+      background-size: cover;
   }
 }
 

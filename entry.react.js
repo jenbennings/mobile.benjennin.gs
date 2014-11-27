@@ -10,8 +10,7 @@ const SCREENS = require('./screens.js');
 var ScreenProjectImages = React.createClass({
   getInitialState: function() {
     return {
-      currentImage: 0,
-      mouseState: null
+      currentImage: 0
     }
   },
   getInitialProps: function() {
@@ -19,44 +18,16 @@ var ScreenProjectImages = React.createClass({
       data: new Array
     }
   },
-  handleMouseMove: function(event) {
-    var mouseState = event.clientX > window.innerWidth / 2 ? 'next' : 'prev';
-    if(this.props.data.length > 1) this.setState({ mouseState: mouseState });
-  },
-  handleClick: function(event) {
-    this.state.mouseState === 'next' ? this.handleNext(event) : this.handlePrev(event);
-  },
-  handleNext: function(event) {
-    event.preventDefault();
-
-    var currentImage = this.state.currentImage;
-    currentImage++;
-
-    if(currentImage === this.props.data.length) currentImage = 0;
-
-    this.setState({ currentImage: currentImage });
-  },
-  handlePrev: function(event) {
-    event.preventDefault();
-
-    var currentImage = this.state.currentImage;
-    currentImage--;
-
-    if(currentImage < 0) currentImage = this.props.data.length-1;
-
-    this.setState({ currentImage: currentImage });
-  },
   render: function() {
     var images = this.props.data.map(function(image, i) {
       var style = {
-        backgroundImage: 'url("images/projects/'+ image +'")',
-        visibility: this.state.currentImage === i ? 'visible' : 'hidden'
+        backgroundImage: 'url("images/projects/'+ image +'")'
       }
 
       return (<div className="ScreenProjectImage" key={image} style={style} />);
     }.bind(this));
 
-    return (<div className="ScreenProjectImages" onMouseMove={this.handleMouseMove} onClick={this.handleClick} data-mouse-state={this.state.mouseState}>
+    return (<div className="ScreenProjectImages">
       {images}
     </div>);
   }
@@ -99,6 +70,32 @@ var ScreenProject = React.createClass({
   }
 });
 
+var Intro = React.createClass({
+  getInitialProps: function() {
+    return {
+      data: {
+        title: null,
+        images: new Array
+      }
+    }
+  },
+  render: function() {
+    return (<div className="ScreenProject">
+      {this.props.data.title &&
+          <div className="IntroContent">
+            {this.props.data.title &&
+              <div className="IntroTitle"><h2>{this.props.data.title}</h2></div>
+            }
+        </div>
+      }
+
+      {this.props.data.images.length &&
+        <ScreenProjectImages data={this.props.data.images} />
+      }
+    </div>);
+  }
+});
+
 var Screen = React.createClass({
   getInitialProps: function() {
     return {
@@ -111,6 +108,9 @@ var Screen = React.createClass({
   },
   render: function() {
     return (<div className="Screen">
+      {this.props.data.intro &&
+        <Intro data={this.props.data.intro} />
+      }
       {this.props.data.html &&
         <div className="ScreenHTML" dangerouslySetInnerHTML={{__html: this.props.data.html}} />
       }

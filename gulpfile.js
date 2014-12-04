@@ -16,7 +16,6 @@ gulp.task('scripts', function() {
   return gulp.src(SCRIPTS_ENTRY)
     .pipe(plumber())
     .pipe(browserify({ transform: [reactify] }))
-    .pipe(uglify())
     .pipe(rename('bundle.js'))
     .pipe(gulp.dest(PUBLIC_DIR))
     .pipe(livereload());

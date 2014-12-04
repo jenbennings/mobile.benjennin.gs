@@ -1,7 +1,7 @@
 module.exports = [{
   intro: {
-    title: 'Derp',
-    images: ['home.jpg']
+    html: '<h1>Things I\'ve designed for <span data-icon="mobile"></span>.</h1>',
+    images: ['']
   }
 }, {
   project: {
@@ -26,19 +26,12 @@ module.exports = [{
   }
 }, {
   project: {
-    title: 'Trolleybus',
+    title: 'Re:collection',
     description: 'A responsive website that blah blah responsive yadda yadda. A collaboration between derp & derp.',
     link: 'http://google.com/',
-    images: ['trolleybus.jpg']
+    images: ['recollection.jpg']
   }
 }, {
-  project: {
-    title: 'Framer',
-    description: 'A responsive website that blah blah responsive yadda yadda. A collaboration between derp & derp.',
-    link: 'http://google.com/',
-    images: ['framer.jpg']
-  }
-}, {
-  html: '<h2><a href="#">hello@benjennin.gs</a></h2>',
+  html: '<h2>Currently working with <a href="#"><span class="underline">Coinbase</span>.</a></h2>',
   project: false
 }];

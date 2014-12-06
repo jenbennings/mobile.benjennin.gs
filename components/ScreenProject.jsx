@@ -9,13 +9,15 @@ var ScreenProject = React.createClass({
       data: {
         title: null,
         description: null,
+        emoji: null,
+        outro: null,
         link: null,
         images: new Array
       }
     }
   },
   render: function() {
-    var hasProjectInfo = this.props.data.title || this.props.data.description || this.props.data.link;
+    var hasProjectInfo = this.props.data.title || this.props.data.description || this.props.data.emoji || this.props.data.outro || this.props.data.link;
     return (<div className="ScreenProject">
       {hasProjectInfo &&
         <div className="ScreenProjectInfo">
@@ -24,10 +26,13 @@ var ScreenProject = React.createClass({
               <div className="ScreenProjectTitle"><h2>{this.props.data.title}</h2></div>
             }
             {this.props.data.description &&
-              <div className="ScreenProjectDescription"><p>{this.props.data.description}</p></div>
+              <div className="ScreenProjectDescription" dangerouslySetInnerHTML={{__html: this.props.data.description}} />
+            }
+            {this.props.data.emoji &&
+              <div className="ScreenProjectEmoji" dangerouslySetInnerHTML={{__html: this.props.data.emoji}} />
             }
             {this.props.data.link &&
-              <div className="ScreenProjectLink"><a target="_blank" href={this.props.data.link}>Check it</a></div>
+              <div className="ScreenProjectLink"><a target="_blank" href={this.props.data.link}>{this.props.data.outro}</a></div>
             }
           </div>
         </div>

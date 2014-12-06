@@ -1,7 +1,6 @@
 /** @jsx React.DOM */
 
 var React = require('react');
-var Intro = require('./Intro.jsx');
 var ScreenProject = require('./ScreenProject.jsx');
 
 var Screen = React.createClass({
@@ -16,9 +15,6 @@ var Screen = React.createClass({
   },
   render: function() {
     return (<div className="Screen">
-      {this.props.data.intro &&
-        <Intro data={this.props.data.intro} />
-      }
       {this.props.data.html &&
         <div className="ScreenHTML" dangerouslySetInnerHTML={{__html: this.props.data.html}} />
       }

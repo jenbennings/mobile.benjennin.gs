@@ -327,7 +327,10 @@ h2 {
   @include breakpoint(tablet) {
     border-bottom: 3px solid black;
   }
+}
 
+.inline {
+  display: inline-block;
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {

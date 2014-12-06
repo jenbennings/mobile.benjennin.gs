@@ -1,10 +1,10 @@
 module.exports = [{
-    html: '<h1>Things I\'ve designed for <span data-icon="mobile"></span>.</h1>',
+    html: '<h1>Things I\'ve designed for <span class="inline"><span data-icon="mobile"></span>.</span></h1>',
     project: false
 }, {
   project: {
     title: 'Huxtaburger',
-    description: '<p>Exploding burgers. Collaboration between <a href="http://measured.com.au">Measured</a>, <a href="http://mattinnes.com">Matt Innes</a> & <a href="http://martycook.com.au">Marty Cook</a>.</p>',
+    description: '<p>Exploding burgers. Collaboration between <a href="http://measured.com.au" target="_blank">Measured</a>, <a href="http://mattinnes.com" target="_blank">Matt Innes</a> & <a href="http://martycook.com.au" target="_blank">Marty Cook</a>.</p>',
     emoji: '<span data-icon="burger"></span>',
     outro: 'huxtaburger.com.au',
     link: 'http://huxtaburger.com.au',
@@ -31,7 +31,7 @@ module.exports = [{
 }, {
   project: {
     title: 'Re:collection',
-    description: '<p>Online inventory of Australian graphic design curated by <a href="http://hofstede.com.au">Dominic Hofstede</a>.</p>',
+    description: '<p>Online inventory of Australian graphic design curated by <a href="http://hofstede.com.au" target="_blank">Dominic Hofstede</a>.</p>',
     emoji: '<span data-icon="books"></span>',
     outro: 'recollection.com.au',
     link: 'http://recollection.com.au',

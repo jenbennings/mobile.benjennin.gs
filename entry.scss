@@ -289,22 +289,26 @@ h2 {
       text-align: center;
       opacity: 0;
       color: white;
-      background-color: #333;
-      padding-top: 5px;
-      padding-bottom: 5px;
-      border-radius: 3px;
       transition: all 0.2s;
 
-      &:after {
-        display: block;
-        content: '';
-        width: 10px;
-        height: 10px;
-        position: absolute;
-        left: 35px;
-        transform: rotate(45deg);
-        bottom: -5px;
-        background-color: inherit;
+      .TooltipText {
+        display: inline-block;
+        background-color: #333;
+        border-radius: 3px;
+        padding: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+        &:after {
+          display: block;
+          content: '';
+          width: 10px;
+          height: 10px;
+          position: absolute;
+          left: 35px;
+          transform: rotate(45deg);
+          bottom: -5px;
+          background-color: inherit;
+        }
       }
     }
 

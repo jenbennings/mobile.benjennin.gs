@@ -25,19 +25,19 @@ var Screen = React.createClass({
         <div className="Footer">
           <a href="http://twitter.com/benjennin_gs" target="_blank">
             <span data-icon="email" />
-            <span className="Tooltip">Email</span>
+            <span className="Tooltip"><span className="TooltipText">Email</span></span>
           </a>
           <a href="http://twitter.com/benjennin_gs" target="_blank">
             <span data-icon="twitter" />
-            <span className="Tooltip">Twitter</span>
+            <span className="Tooltip"><span className="TooltipText">Twitter</span></span>
           </a>
           <a href="http://dribbble.com/benjennings" target="_blank">
             <span data-icon="dribbble" />
-            <span className="Tooltip">Dribbble</span>
+            <span className="Tooltip"><span className="TooltipText">Dribbble</span></span>
           </a>
           <a href="http://github.com/jenbennings" target="_blank">
             <span data-icon="github" />
-            <span className="Tooltip">Github</span>
+            <span className="Tooltip"><span className="TooltipText">Github</span></span>
           </a>
         </div>
       }

@@ -23,7 +23,7 @@ var Screen = React.createClass({
       }
       {this.props.last &&
         <div className="Footer">
-          <a href="http://twitter.com/benjennin_gs" target="_blank">
+          <a href="mailto:mail@benjennin.gs">
             <span data-icon="email" />
             <span className="Tooltip"><span className="TooltipText">Email</span></span>
           </a>

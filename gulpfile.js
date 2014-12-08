@@ -2,6 +2,15 @@ var gulp = require('gulp');
 var plumber = require('gulp-plumber');
 var rename = require('gulp-rename');
 var livereload = require('gulp-livereload');
+var fs = require("fs");
+var s3 = require("gulp-s3");
+
+aws = JSON.parse(fs.readFileSync('./credentials.json'));
+
+gulp.task('s3', function() {
+  gulp.src('./public/**')
+    .pipe(s3(aws));
+});
 
 const SCRIPTS_ENTRY = 'entry.react.js';
 const STYLES_ENTRY = 'entry.scss';

@@ -24,8 +24,8 @@ module.exports = [{
     title: 'UOME',
     description: '<p>Experimental interface for<br>sending and receiving bitcoin.</p>',
     emoji: '<span data-icon="money"></span>',
-    outro: 'demo video',
-    link: 'http://google.com/',
+    outro: 'watch demo',
+    link: 'https://vimeo.com/113909710',
     images: ['uome.jpg']
   }
 }, {
